@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.get("/api", (req, res) => {
+app.get("/routes/workexperience", (req, res) => {
     res.json({message: "Welcome to my api!"});
 });
 
