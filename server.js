@@ -6,10 +6,10 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 
-// Routes
-app.get("/routes/workexperience", (req, res) => {
-    res.json({message: "Welcome to my api!"});
-});
+// Importerar routes från workexperience.js och kopplar till /api/workexperience som blir den url som används
+const workexperienceRouter = require('./routes/workexperience');
+app.use('/api/workexperience', workexperienceRouter);
+
 
 // Startar upp servern
 const port = process.env.PORT || 3000;
