@@ -1,5 +1,6 @@
 const pool = require('./db');
 
+// Skapar tabellen
 const createTable = async () => {
   const query = `
     CREATE TABLE IF NOT EXISTS workexperience (
